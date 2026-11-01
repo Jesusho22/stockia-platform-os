@@ -14,8 +14,8 @@ jobs:
     name: Build and test (unit + integration)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '21'
@@ -36,7 +36,7 @@ jobs:
               echo "::error title=Test report $(basename "$report")::${body}"
             fi
           done
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: always()
         with:
           name: test-reports
@@ -59,8 +59,8 @@ jobs:
         options: >-
           --health-cmd="mysqladmin ping -proot" --health-interval=5s --health-timeout=5s --health-retries=20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '21'
@@ -89,7 +89,7 @@ jobs:
         run: |
           body=$(grep -E 'ERROR|WARN|Exception|Caused by' api.log | head -40 | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')
           echo "::error title=API log::${body}"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: always()
         with:
           name: api-log
