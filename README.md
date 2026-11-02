@@ -113,7 +113,7 @@ mvn verify
 
 GitFlow with `main` (releases) and `develop` (integration); features in `feature/<name>`, releases in
 `release/<version>` and fixes in `hotfix/<version>`. Commits follow Conventional Commits and versions follow Semantic
-Versioning (current version: `1.0.0`).
+Versioning (current version: `1.0.1`).
 
 ## Team
 

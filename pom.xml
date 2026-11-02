@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.databit.stockia</groupId>
     <artifactId>platform</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>stockia-platform</name>
     <description>StockIA Platform RESTful API (DataBite Corp) - Spring Boot, DDD by bounded context</description>
     <url>https://github.com/Jesusho22/stockia-platform-os</url>
